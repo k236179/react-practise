@@ -3,12 +3,13 @@ import Search from "../components/Search";
 import axios from "axios";
 import Picture from "../components/Picture";
 
+
 const Homepage = () => {
   let [input, setInput] = useState("");
   let [data, setData] = useState(null);
   let [page, setPage] = useState(1);
   let [currentSearch, setCurrentSearch] = useState("");
-  const auth = "2WS5Nc7hLQveCPoXHazplNyx2bJCy1V7GX";
+  const auth = "process.env.REACT_APP_FIREBASE_API_KEY";
   const initialURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
   let searchURL = `https://api.pexels.com/v1/search?query=${input}&per_page=15&page=1`;
 
